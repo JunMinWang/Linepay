@@ -29,9 +29,24 @@
 }
 
 .product-info-price {
-    
+
 }
 
 .center-container {
     text-align: center;
+}
+
+
+.payment-type-radio {
+    width: 0px;
+}
+
+.payment-type-label > img {
+    height: 1.6rem;
+    width: 4.5rem;
+}
+
+.payment-type-label > i {
+    font-size: 1.5rem;
+    max-width: 4.5rem;
 }

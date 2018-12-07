@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h2 class="align-middle" style="display: inline;">結帳</h2>
+            <h2 class="align-middle" style="display: inline;">購物車</h2>
         </div>
         <div class="card-body">
             <div class="table-responsive-md">
@@ -15,7 +15,7 @@
                             <th scope="col">訂購品項</th>
                             <th scope="col">單價</th>
                             <th scope="col">數量</th>
-                            <th scope="col">總金額</th>
+                            <th scope="col">小計</th>
                             <th scope="col">操作</th>
                         </tr>
                     </thead>
@@ -48,9 +48,10 @@
             </div>
         </div>
         <div class="card-footer center-container">
-            <a href="#" class="btn btn-outline-success">
+            <a href="{{ route('order.preview') }}" class="btn btn-outline-success">
                 <i class="fa fa-money"></i> 確認購買
             </a>
+
             <a href="{{ route('product.list') }}" class="btn btn-outline-primary">
                 <i class="fa fa-shopping-basket"></i> 繼續選購
             </a>
@@ -63,8 +64,5 @@
             </form>
         </div>
     </div>
-
-
-
 </div>
 @endsection
