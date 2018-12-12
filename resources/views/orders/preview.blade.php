@@ -39,28 +39,32 @@
 
                 <form action="{{ route('order.add') }}" method="POST">
                     @csrf
-                    <div class="form-group">
-                        <label>付款方式</label>
-                        <label class="payment-type-label btn btn-primary">
-                           <input name="paymentType" type="radio" value="1" class="payment-type-radio" checked>
-                           <i class="far fa-money-bill-alt"></i>
-                        </label>
-                        <label class="payment-type-label btn btn-outline-dark">
-                            <input name="paymentType" type="radio" value="2" class="payment-type-radio">
-                            <img src="{{ asset('img/linepay.png') }}">
-                        </label>
-                        <label class="payment-type-label btn btn-outline-dark">
-                           <input name="paymentType" type="radio" value="3" class="payment-type-radio">
-                           <i class="fa fa-credit-card"></i>
-                        </label>
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <label class="font-weight-bold font-bg">付款方式</label>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="payment-type-label btn btn-primary">
+                                <input name="paymentType" type="radio" value="1" class="payment-type-radio" checked>
+                                <i class="far fa-money-bill-alt"></i>
+                            </label>
+                            <label class="payment-type-label btn btn-outline-dark">
+                                <input name="paymentType" type="radio" value="2" class="payment-type-radio">
+                                <img src="{{ asset('img/linepay.png') }}">
+                            </label>
+                            <label class="payment-type-label btn btn-outline-dark">
+                                <input name="paymentType" type="radio" value="3" class="payment-type-radio">
+                                <i class="fa fa-credit-card"></i>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label>總金額: {{ $total }}</label>
+                        <label class="font-weight-bold font-bg">總金額: {{ $total }}</label>
                     </div>
 
                     <div class="center-container">
-                        <button type="button" class="btn btn-outline-primary">結帳</button>
+                        <button type="submit" class="btn btn-outline-primary">結帳</button>
                         <button type="button" class="btn btn-outline-danger">取消</button>
                     </div>
                 </form>

@@ -49,7 +49,7 @@
         </div>
         <div class="card-footer center-container">
             <a href="{{ route('order.preview') }}" class="btn btn-outline-success">
-                <i class="fa fa-money"></i> 確認購買
+                <i class="fas fa-money-check"></i> 確認購買
             </a>
 
             <a href="{{ route('product.list') }}" class="btn btn-outline-primary">

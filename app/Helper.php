@@ -11,7 +11,7 @@ use Carbon\Carbon;
 function generateOrderId($serial)
 {
     $dt = Carbon::now();
-    return $dt->format('Ymd') . str_pad($serial, 4, STR_PAD_LEFT);
+    return substr($dt->format('Ymd'), -6) . str_pad($serial, 3, '0', STR_PAD_LEFT);
 }
 
 /**

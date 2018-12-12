@@ -21,6 +21,7 @@ class Orders extends Migration
             $table->smallInteger('status');
             $table->smallInteger('payment_type');
             $table->smallInteger('payment_status');
+            $table->integer('user_id');
             $table->text('memo');
             $table->timestamps();
         });

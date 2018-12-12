@@ -21,4 +21,16 @@ class OrderRepository extends BaseRepository
     {
         return $this->model->whereDate('created_at', Carbon::today())->count() + 1;
     }
+
+    /**
+     * 更新訂單資訊
+     *
+     * @param string $orderNo
+     * @param array $attributes
+     * @return void
+     */
+    public function updateOrderByOrderNo($orderNo, $attributes)
+    {
+        return $this->model->where('order_no', $orderNo)->update($attributes);
+    }
 }
