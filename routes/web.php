@@ -28,11 +28,11 @@ Route::prefix('product')->group(function () {
 Route::prefix('order')->group(function () {
     Route::get('/', 'OrderController@index');
 
-    Route::post('/', 'OrderController@store')->name('order.add');
+    Route::post('/', 'OrderController@store')->name('order.add')->middleware('auth.member');
 
     Route::get('/preview', 'OrderController@preview')->name('order.preview');
 
-    Route::get('/confirm', 'OrderController@confirm')->name('order.confirm');
+    Route::get('/confirm', 'OrderController@confirm')->name('order.confirm')->middleware('auth.member');
 });
 
 // 購物車相關
